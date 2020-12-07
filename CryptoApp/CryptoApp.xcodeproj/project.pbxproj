@@ -13,9 +13,12 @@
 		84E8E8B3257EE12100212032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E8E8B1257EE12100212032 /* Main.storyboard */; };
 		84E8E8B5257EE12200212032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E8E8B4257EE12200212032 /* Assets.xcassets */; };
 		84E8E8B8257EE12200212032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E8E8B6257EE12200212032 /* LaunchScreen.storyboard */; };
+		CF341468F89E643794A87F91 /* Pods_CryptoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A807BA852A6D78AC7CFE52B4 /* Pods_CryptoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07AD200AEDB843E58B25D7D6 /* Pods-CryptoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoApp.debug.xcconfig"; path = "Target Support Files/Pods-CryptoApp/Pods-CryptoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		42B33F244E6BC0E61CDD6D0B /* Pods-CryptoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoApp.release.xcconfig"; path = "Target Support Files/Pods-CryptoApp/Pods-CryptoApp.release.xcconfig"; sourceTree = "<group>"; };
 		84E8E8A8257EE12100212032 /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E8E8AB257EE12100212032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E8E8AD257EE12100212032 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		84E8E8B4257EE12200212032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E8E8B7257EE12200212032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84E8E8B9257EE12200212032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A807BA852A6D78AC7CFE52B4 /* Pods_CryptoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF341468F89E643794A87F91 /* Pods_CryptoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		250DE354A3323D09307B1745 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A807BA852A6D78AC7CFE52B4 /* Pods_CryptoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84E8E89F257EE12100212032 = {
 			isa = PBXGroup;
 			children = (
 				84E8E8AA257EE12100212032 /* CryptoApp */,
 				84E8E8A9257EE12100212032 /* Products */,
+				ACB5D2C8A850F47B9DA190EB /* Pods */,
+				250DE354A3323D09307B1745 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +73,31 @@
 			children = (
 				84E8E8AB257EE12100212032 /* AppDelegate.swift */,
 				84E8E8AD257EE12100212032 /* SceneDelegate.swift */,
-				84E8E8AF257EE12100212032 /* ViewController.swift */,
+				84E8E8C0257EE16400212032 /* Controllers */,
 				84E8E8B1257EE12100212032 /* Main.storyboard */,
 				84E8E8B4257EE12200212032 /* Assets.xcassets */,
 				84E8E8B6257EE12200212032 /* LaunchScreen.storyboard */,
 				84E8E8B9257EE12200212032 /* Info.plist */,
 			);
 			path = CryptoApp;
+			sourceTree = "<group>";
+		};
+		84E8E8C0257EE16400212032 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84E8E8AF257EE12100212032 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACB5D2C8A850F47B9DA190EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07AD200AEDB843E58B25D7D6 /* Pods-CryptoApp.debug.xcconfig */,
+				42B33F244E6BC0E61CDD6D0B /* Pods-CryptoApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84E8E8BC257EE12200212032 /* Build configuration list for PBXNativeTarget "CryptoApp" */;
 			buildPhases = (
+				DEC24588C253FE40F03ADFBB /* [CP] Check Pods Manifest.lock */,
 				84E8E8A4257EE12100212032 /* Sources */,
 				84E8E8A5257EE12100212032 /* Frameworks */,
 				84E8E8A6257EE12100212032 /* Resources */,
+				F30F959BE6001057F301AB82 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEC24588C253FE40F03ADFBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F30F959BE6001057F301AB82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoApp/Pods-CryptoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoApp/Pods-CryptoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoApp/Pods-CryptoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84E8E8A4257EE12100212032 /* Sources */ = {
@@ -283,6 +360,7 @@
 		};
 		84E8E8BD257EE12200212032 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07AD200AEDB843E58B25D7D6 /* Pods-CryptoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +379,7 @@
 		};
 		84E8E8BE257EE12200212032 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42B33F244E6BC0E61CDD6D0B /* Pods-CryptoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
