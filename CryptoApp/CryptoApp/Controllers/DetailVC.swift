@@ -7,8 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DetailVC: UIViewController {
 
+    @IBOutlet weak var cryptoName: UILabel!
+    @IBOutlet weak var marketLabel: UILabel!
+    @IBOutlet weak var volumeLabel: UILabel!
+    @IBOutlet weak var changeLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
