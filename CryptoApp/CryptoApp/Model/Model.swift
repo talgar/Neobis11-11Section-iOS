@@ -29,8 +29,8 @@ struct Raw : Codable {
 }
 
 struct UsdRow : Codable {
-    let MKTCAP : String?
-    let CHANGEPCT24HOUR : String?
+    let MKTCAP : Double?
+    let CHANGEPCT24HOUR : Double?
 }
 
 struct Display : Codable {
@@ -42,3 +42,6 @@ struct UsdDisplay : Codable {
     let VOLUME24HOUR : String?
     let CHANGE24HOUR : String?
 }
+
+
+

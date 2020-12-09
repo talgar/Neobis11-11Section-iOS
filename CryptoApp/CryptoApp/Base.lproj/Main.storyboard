@@ -15,10 +15,10 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="xRQ-tQ-VaO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
-                        <color key="separatorColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="separatorColor" systemColor="systemGreenColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="81" id="mWh-sk-3Kk" customClass="CryptoListTableViewCell" customModule="CryptoApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="81" id="mWh-sk-3Kk" customClass="CryptoTableViewCell" customModule="CryptoApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mWh-sk-3Kk" id="mM9-fH-uQo">
@@ -33,7 +33,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O47-vh-J4P">
-                                            <rect key="frame" x="69" y="48" width="140" height="20"/>
+                                            <rect key="frame" x="69" y="49" width="140" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="dVr-KS-R3A"/>
                                                 <constraint firstAttribute="width" constant="140" id="ejB-Uo-DdO"/>
@@ -43,7 +43,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrW-YB-cua" userLabel="PriceLabel">
-                                            <rect key="frame" x="282" y="20" width="120" height="20"/>
+                                            <rect key="frame" x="282" y="20.5" width="120" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="maD-EX-bSL"/>
                                                 <constraint firstAttribute="height" constant="20" id="oEi-BS-Nb7"/>
@@ -53,7 +53,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geM-yd-CQC" userLabel="ChageLabel">
-                                            <rect key="frame" x="282" y="48" width="120" height="20"/>
+                                            <rect key="frame" x="282" y="49" width="120" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="9gY-s7-gnT"/>
                                                 <constraint firstAttribute="height" constant="20" id="cF5-Eb-X11"/>
@@ -63,7 +63,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F3-Ml-6zq" userLabel="Name">
-                                            <rect key="frame" x="69" y="20" width="140" height="20"/>
+                                            <rect key="frame" x="69" y="20" width="140" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="g68-NL-MOg"/>
                                                 <constraint firstAttribute="width" constant="140" id="xDW-cG-HsJ"/>
@@ -86,6 +86,7 @@
                                         <constraint firstItem="geM-yd-CQC" firstAttribute="centerY" secondItem="O47-vh-J4P" secondAttribute="centerY" id="fR5-LN-pJD"/>
                                         <constraint firstItem="ooG-ez-Utw" firstAttribute="centerX" secondItem="mM9-fH-uQo" secondAttribute="centerX" id="qww-OF-U15"/>
                                         <constraint firstItem="ooG-ez-Utw" firstAttribute="centerY" secondItem="mM9-fH-uQo" secondAttribute="centerY" id="u5L-IZ-uZZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="O47-vh-J4P" secondAttribute="bottom" constant="12" id="u5i-ym-mh8"/>
                                         <constraint firstItem="6F3-Ml-6zq" firstAttribute="leading" secondItem="ooG-ez-Utw" secondAttribute="trailing" constant="12" id="vCW-jD-ksT"/>
                                     </constraints>
                                     <variation key="default">
@@ -124,11 +125,12 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="changeLabel" destination="geM-yd-CQC" id="rYS-NT-IX1"/>
-                                    <outlet property="cryptoImage" destination="ooG-ez-Utw" id="yhc-q0-8fo"/>
-                                    <outlet property="internalLabel" destination="O47-vh-J4P" id="3JS-Mk-gL3"/>
-                                    <outlet property="nameLabel" destination="6F3-Ml-6zq" id="clQ-Mt-dhw"/>
-                                    <outlet property="priceLabel" destination="LrW-YB-cua" id="YqD-vx-XQs"/>
+                                    <outlet property="changeLabel" destination="geM-yd-CQC" id="avP-zz-Ebp"/>
+                                    <outlet property="cryptoImage" destination="ooG-ez-Utw" id="weR-gl-x8Z"/>
+                                    <outlet property="internalLabel" destination="O47-vh-J4P" id="2v3-22-5DB"/>
+                                    <outlet property="nameLabel" destination="6F3-Ml-6zq" id="Fnw-qh-alk"/>
+                                    <outlet property="priceLabel" destination="LrW-YB-cua" id="SJl-rI-M1P"/>
+                                    <segue destination="LP4-N8-Mh3" kind="show" id="S7g-p7-Xzc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -140,7 +142,6 @@
                     <navigationItem key="navigationItem" title="Market" id="L0A-gY-AvQ"/>
                     <connections>
                         <outlet property="tablleView" destination="xRQ-tQ-VaO" id="PRN-UK-XgT"/>
-                        <segue destination="LP4-N8-Mh3" kind="show" id="RXm-7J-t6M"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjq-1X-tQA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -156,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin Cash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ult-KP-InE" userLabel="Name ">
-                                <rect key="frame" x="117" y="148" width="180" height="40"/>
+                                <rect key="frame" x="117" y="200" width="180" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="34g-e7-D35"/>
@@ -167,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Market Cap" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="441-dC-vIt">
-                                <rect key="frame" x="40" y="228" width="120" height="21"/>
+                                <rect key="frame" x="40" y="280" width="120" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="4W7-dN-rAZ"/>
                                     <constraint firstAttribute="width" constant="120" id="KKC-ME-02P"/>
@@ -182,7 +183,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Volume" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sin-Iz-5AY">
-                                <rect key="frame" x="40" y="289" width="120" height="21"/>
+                                <rect key="frame" x="40" y="341" width="120" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="dmY-Dn-zJk"/>
                                     <constraint firstAttribute="width" constant="140" id="ubQ-b1-Vy1"/>
@@ -197,7 +198,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Change" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrq-Tl-4r7">
-                                <rect key="frame" x="40" y="350" width="120" height="21"/>
+                                <rect key="frame" x="40" y="402" width="120" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="2r1-wP-OH7"/>
                                     <constraint firstAttribute="width" constant="120" id="mRx-qs-GUh"/>
@@ -212,7 +213,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="743783" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvz-jm-4kK">
-                                <rect key="frame" x="240" y="228" width="59" height="21"/>
+                                <rect key="frame" x="240" y="280" width="59" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="S1o-2P-oY3"/>
                                 </constraints>
@@ -226,7 +227,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="74374564783" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-jU-Hy9">
-                                <rect key="frame" x="240" y="350" width="108.5" height="21"/>
+                                <rect key="frame" x="240" y="402" width="108.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="L6G-1s-VLx"/>
                                 </constraints>
@@ -240,7 +241,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="74374564783" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEN-13-ono">
-                                <rect key="frame" x="240" y="289" width="108.5" height="21"/>
+                                <rect key="frame" x="240" y="341" width="108.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="9CK-PL-Hak"/>
                                 </constraints>
@@ -296,10 +297,10 @@
                                 <exclude reference="hJQ-d1-1Wq"/>
                                 <exclude reference="sCl-D3-Xay"/>
                                 <exclude reference="saI-ut-Zz8"/>
-                                <exclude reference="8fa-ag-25e"/>
-                                <exclude reference="mhz-yo-DUb"/>
                                 <exclude reference="cmj-X0-2Bd"/>
                                 <exclude reference="i25-kJ-1UM"/>
+                                <exclude reference="8fa-ag-25e"/>
+                                <exclude reference="mhz-yo-DUb"/>
                                 <exclude reference="mN4-91-BTU"/>
                                 <exclude reference="xGi-Nk-ZEO"/>
                             </mask>
@@ -321,10 +322,10 @@
                                 <exclude reference="hJQ-d1-1Wq"/>
                                 <exclude reference="sCl-D3-Xay"/>
                                 <include reference="saI-ut-Zz8"/>
-                                <include reference="8fa-ag-25e"/>
-                                <include reference="mhz-yo-DUb"/>
                                 <include reference="cmj-X0-2Bd"/>
                                 <include reference="i25-kJ-1UM"/>
+                                <include reference="8fa-ag-25e"/>
+                                <include reference="mhz-yo-DUb"/>
                                 <include reference="mN4-91-BTU"/>
                                 <include reference="xGi-Nk-ZEO"/>
                             </mask>
@@ -347,11 +348,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sIN-c0-N5x" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P1T-t8-mIW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="P1T-t8-mIW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemGreenColor"/>
                         <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -368,9 +372,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

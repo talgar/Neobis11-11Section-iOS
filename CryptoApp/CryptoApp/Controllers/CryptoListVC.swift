@@ -9,37 +9,60 @@ import UIKit
 
 class CryptoListVC: UITableViewController {
 
-    
     @IBOutlet var tablleView: UITableView!
     
-    var crypto : [CryptoInfo] = []
+    var crypto : Crypto?
+    var cryptoInfo : [CryptoInfo] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadCrypto()
     }
 
+    func loadCrypto() {
+        ServerManager.instance.loadCryptoInfo(completion: updateCrypto)
+    }
+    
+    func updateCrypto(info:Crypto) {
+        for i in (info.Data!) {
+            cryptoInfo.append(i)
+            tablleView.reloadData()
+        }
+        print(cryptoInfo)
+    }
     
     
     
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return cryptoInfo.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CryptoTableViewCell
         
-
+        if cryptoInfo.isEmpty {
+            return cell
+        }
+        
+        let info = cryptoInfo[indexPath.row]
+        
+        cell.cryptoImage.image = UIImage(named: (info.CoinInfo?.Name!.description)!)
+        cell.nameLabel.text = info.CoinInfo?.FullName?.description
+        cell.internalLabel.text = info.CoinInfo?.Internal?.description
+        cell.priceLabel.text = info.DISPLAY?.USD?.PRICE?.description
+        cell.changeLabel.text = ((info.RAW?.USD?.CHANGEPCT24HOUR?.roundedCrypto(digits: 2).description)!)+"%"
+        
+        if ((info.RAW?.USD?.CHANGEPCT24HOUR)!) > 0 {
+            cell.changeLabel.textColor = .green
+        } else {
+            cell.changeLabel.textColor = .red
+        }
+        
         return cell
     }
     
@@ -90,3 +113,12 @@ class CryptoListVC: UITableViewController {
     */
 
 }
+
+
+extension Double {
+    func roundedCrypto(digits: Int) -> Double {
+        let multiplier = pow(10.0, Double(digits))
+        return (self * multiplier).rounded() / multiplier
+    }
+}
+
