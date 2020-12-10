@@ -13,6 +13,7 @@ class CryptoTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var internalLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var upDownImage: UIImageView!
     @IBOutlet weak var changeLabel: UILabel!
 }
 
