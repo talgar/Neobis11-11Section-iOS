@@ -100,14 +100,13 @@
 		84E8E8AA257EE12100212032 /* CryptoApp */ = {
 			isa = PBXGroup;
 			children = (
-				84E8E8AB257EE12100212032 /* AppDelegate.swift */,
-				84E8E8AD257EE12100212032 /* SceneDelegate.swift */,
+				84EEFE9D2585C2B900979494 /* AppDelegate */,
+				84EEFE9F2585C2C400979494 /* SceneDelegate */,
 				84F8373225817A08006D3C15 /* Extensions */,
 				84E8E8C0257EE16400212032 /* Controllers */,
 				8405686F257F121F00424BB1 /* Model */,
 				84056879257F1BB800424BB1 /* ServerManager */,
-				84E8E8B1257EE12100212032 /* Main.storyboard */,
-				84E8E8B6257EE12200212032 /* LaunchScreen.storyboard */,
+				84EEFEA12585C2E000979494 /* Views */,
 				84E8E8B4257EE12200212032 /* Assets.xcassets */,
 				84E8E8B9257EE12200212032 /* Info.plist */,
 			);
@@ -122,6 +121,31 @@
 				8472698425803E7B00ECCB21 /* CryptoTableViewCell.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84EEFE9D2585C2B900979494 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84E8E8AB257EE12100212032 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		84EEFE9F2585C2C400979494 /* SceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84E8E8AD257EE12100212032 /* SceneDelegate.swift */,
+			);
+			path = SceneDelegate;
+			sourceTree = "<group>";
+		};
+		84EEFEA12585C2E000979494 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84E8E8B1257EE12100212032 /* Main.storyboard */,
+				84E8E8B6257EE12200212032 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		84F8373225817A08006D3C15 /* Extensions */ = {
